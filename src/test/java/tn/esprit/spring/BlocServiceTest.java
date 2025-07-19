@@ -1,57 +1,57 @@
 package tn.esprit.spring;
 
-import org.junit.After;
 import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@TestMethodOrder(MethodOrderer.class)
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @SpringBootTest
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BlocServiceTest {
 
     @BeforeAll
-    void bedore() {
-
+    void before() {
+        // setup before all tests
     }
 
     @AfterAll
     void after() {
-
+        // cleanup after all tests
     }
 
     @BeforeEach
     void beforeEach() {
-
+        // setup before each test
     }
 
     @AfterEach
     void afterEach() {
-
+        // cleanup after each test
     }
 
     @Order(1)
     @RepeatedTest(4)
     void test() {
-
+        // test logic
     }
 
     @Order(4)
     @Test
     void test2() {
-
+        // test logic
     }
 
     @Order(2)
     @Test
     void test3() {
-
+        // test logic
     }
 
     @Order(3)
     @Test
     void test4() {
-
+        // test logic
     }
 }

@@ -18,6 +18,7 @@ public class _4SE1Class {
 
     @Scheduled(fixedRate = 3000)
     public void fixedRateMethod() {
-       log.error("Hello fixedRate "+ LocalDateTime.now());
+       log.info("Hello fixedRate " + LocalDateTime.now());
     }
+    
 }
